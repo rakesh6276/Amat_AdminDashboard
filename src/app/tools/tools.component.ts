@@ -248,19 +248,19 @@ assignprojecttool(toolprojects:TemplateRef<any>,tooldetails){
 
 }
 
-toolassignusers(details,id){
+toolassignusers(details3,id){
   // console.log(details);
   this.test = this.selectuserstool;
-  let details2 =[];
-  for (let i = 0; i < details.length; i++) {
-    details2.push(details[i]['id']);
+  let details1 =[];
+  for (let i = 0; i < details3.length; i++) {
+    details1.push(details3[i]['id']);
    }
 
    for(let i=0;i<this.assignedtoolsusers.length;i++){
-     details2.push(this.assignedtoolsusers[i]['id'])
+     details1.push(this.assignedtoolsusers[i]['id'])
    }
    let userobjects:object;
-   userobjects={'user_ids':details2};
+   userobjects={'user_ids':details1};
    this._dashserve.toolassignusers(userobjects,id).subscribe(data=>{
    });
 }
